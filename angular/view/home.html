@@ -1,0 +1,102 @@
+
+
+
+    <div class="container">
+     
+    
+<!-- add employs -->
+<form ng-submit="addem()" name="forms">
+   <div class="row m-auto justify-content-center mt-5 mb-5">
+<div class="col-12 col-lg-4 col-xl-4">
+    <input class="form-control m-auto  mt-1" name="name" type="text" placeholder="Name" ng-model="new.name1" ng-required="true">
+    <span class="alert alert-danger"  ng-show="forms.name.$touched && forms.name.$invalid">
+        تکایە ناوێکی گونجاو هەڵپژێرە
+     </span>
+</div>
+
+<div class="col-12 col-lg-4 col-xl-4">
+    <input class="form-control m-auto mt-1" name="age" type="number" placeholder="age" ng-model="new.age1" ng-required="true">
+    <span class="alert alert-danger"  ng-show="forms.age.$touched && forms.age.$invalid">
+        تکایە تەمەنێکی گونجاو هەڵپژێرە
+     </span>
+</div>
+
+<div class="col-12 col-lg-4 col-xl-4">
+    <input class="form-control m-auto mt-1" name="gender" type="text" placeholder="gender" ng-model="new.gender" ng-required="true">
+    <span class="alert alert-danger"  ng-show="forms.gender.$touched && forms.gender.$invalid">
+        تکایە ڕەگەزێکی گونجاو هەڵپژێرە
+     </span>
+</div>
+
+<div class="col-12 col-lg-4 col-xl-4">
+    <input class="form-control m-auto mt-1" name="salary" type="text" placeholder="salary" ng-model="new.salary" ng-required="true">
+    <span class="alert alert-danger"  ng-show="forms.salary.$touched && forms.salary.$invalid">
+        تکایە بڕی موچە بنووسە
+     </span>
+</div>
+
+<div class="col-12 col-lg-4 col-xl-4">
+    <input class="form-control m-auto mt-1" name="ty" type="text" placeholder="Type jobs" ng-model="new.TJ" ng-required="true">
+    <span class="alert alert-danger"  ng-show="forms.ty.$touched && forms.ty.$invalid">
+        تکایە جۆری کار بنووسە 
+     </span>
+</div>
+
+<div class="col-12">
+    <input class="form-control m-auto mt-1 bg-success text-white" type="submit" value="ADD">
+</div>
+
+   </div>
+</form>
+
+
+
+<!-- add employs -->
+
+
+
+
+
+        <!-- DIS Project -->
+        <h1 class="text-center display-5 mt-2">Employee  Information</h1>
+        <!-- Search -->
+        <input class="form-control m-auto col-5 w-75" type="search" 
+        placeholder="Search" aria-label="Search" ng-model="search.name1">
+
+               <div class="d-flex justify-content-center m-1">
+                <button class="btn btn-success m-1" ng-click="order =''" class="">All</button>
+                <button class="btn btn-danger m-1" ng-click="order('name1')" class="">Name</button>
+               <button class="btn btn-danger m-1" ng-click="order ='age1'" class="">Age --</button>
+               <button class="btn btn-danger m-1" ng-click="order ='-age1'" class="">Age ++</button>
+               <button class="btn btn-danger m-1" ng-click="order ='-salary'" class="">Salary ++</button>
+               <button class="btn btn-danger m-1" ng-click="order ='salary'" class="">salary -- </button>
+               <button class="btn btn-danger m-1" ng-click="order ='JT'" class="">Type Job</button>
+        
+               </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <!-- card -->
+
+            <div class="card m-1 mt-4" ng-repeat="em in employees | orderBy:order | filter :search "   style="width: 18rem;">
+                <h4 class="btn btn-danger" ng-click="deletes(em)">Delete</h4>
+                <img src="./image/profile.png" class="w-50 m-auto" alt="...">
+                <div class="card-body">
+                  <h5>Name: {{em.name1 | uppercase }}</h5>
+                  <p>Age: {{em.age1  }} Years</p>
+                  <p>Gender: {{em.gender  }}</p>
+                  <p>Salary: {{em.salary | currency:'$' }} </p>
+                  <p>TypeJobs: {{em.TJ }}</p>
+                  
+                </div>
+            </div>
+
+            <!-- card -->
+
+        </div>
+        <!-- row -->
+</div>
+
+
+
+
+

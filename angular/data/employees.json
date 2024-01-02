@@ -1,0 +1,30 @@
+[
+    {
+        "name1": "Ahmed",
+        "age1": 21,
+        "gender": "Male",
+        "salary": 1000,
+        "TJ": "Web Designer"
+    },
+    {
+        "name1": "Kalle",
+        "age1": 31,
+        "gender": "FeMale",
+        "salary": 500,
+        "TJ": "Graphic Designer"
+    },
+    {
+        "name1": "Shaho",
+        "age1": 25,
+        "gender": "Male",
+        "salary": 4000,
+        "TJ": "Cyber Security"
+    },
+    {
+        "name1": "Hozan",
+        "age1": 30,
+        "gender": "FeMale",
+        "salary": 2000,
+        "TJ": "Front-End Developer"
+    }
+]
